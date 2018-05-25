@@ -21,7 +21,7 @@ import { timeFormat } from 'd3-time-format'
 import LoadCircle from './LoadCircle'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Chart',
   components: {
     LoadCircle
   },
@@ -131,9 +131,7 @@ export default {
 <style scoped>
   svg{
     height: 40vh;
-    width: 58vw;
-    margin-right: 1vw;
-    margin-left: 1vw;
+    width: 100%;
     margin-top: 30vh;
     border: 2px solid black;
   }

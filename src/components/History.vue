@@ -2,9 +2,9 @@
   <div id="logContainer">
     <h1>Troubleshooting Log</h1>
     <div id="logs">
-      <template v-for="log in getLogs">
-        <p v-if="log.alarm" class="warning">{{log.time.toLocaleString()}} <span>HIGH LOAD: {{log.value.toFixed(3)}}</span></p>
-        <p v-else><span>{{log.time.toLocaleString()}} Recovered from high load</span></p>
+      <template v-for="(log, i) in getLogs">
+        <p v-if="log.alarm" class="warning" :key="i">{{log.time.toLocaleString()}} <span>HIGH LOAD: {{log.value.toFixed(2)}}</span></p>
+        <p v-else :key="i"><span>{{log.time.toLocaleString()}} Recovered from high load</span></p>
       </template>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
 <style scoped>
 #logContainer{
   height: 100vh;
-  width: 38vw;
+  width: 39vw;
   box-sizing: border-box;
   padding: 10px;
   display: inline-block;
